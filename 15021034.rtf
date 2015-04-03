@@ -1,0 +1,537 @@
+{\rtf1\ansi\ansicpg936\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red252\green33\blue24;\red46\green174\blue187;\red47\green180\blue29;
+\red193\green101\blue28;\red94\green220\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15780\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs36 \cf0 \'b5\'da\'d2\'bb\'cc\'e2\'a3\'ba\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1 \cf2 \CocoaLigature0 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 char\cf0  i = \cf5 '\\0'\cf0 ;\
+    \cf4 char\cf0  j = \cf5 '\\0'\cf0 ;\
+    \cf4 char\cf0  k = \cf5 '\\0'\cf0 ;\
+    \
+    \cf6 for\cf0 (i = \cf5 'x'\cf0 ; i <= \cf5 'z'\cf0 ; i ++) \
+    \{   \
+        \cf6 for\cf0 (j = \cf5 'x'\cf0 ; j <= \cf5 'z'\cf0 ; j ++) \
+        \{   \
+            \cf6 if\cf0 (i != j)\
+            \{   \
+                \cf6 for\cf0 (k = \cf5 'x'\cf0 ; k <= \cf5 'z'\cf0 ; k ++) \
+                \{   \
+                    \cf6 if\cf0 (k != i && k != j)\
+                    \{   \
+                        \cf6 if\cf0 (i != \cf5 'z'\cf0  && k != \cf5 'y'\cf0  && k != \cf5 'z'\cf0 )\
+                        \{   \
+                            printf(\cf3 "a
+\f0 \'ba\'cd
+\f1 \cf5 %c
+\f0 \cf3 \'b1\'c8\'a3\'ac
+\f1 b
+\f0 \'ba\'cd
+\f1 \cf5 %c
+\f0 \cf3 \'b1\'c8\'a3\'ac
+\f1 c
+\f0 \'ba\'cd
+\f1 \cf5 %c
+\f0 \cf3 \'b1\'c8
+\f1 \cf5 \\n\cf3 "\cf0 ,i,j,k);\
+                        \}\
+                    \}\
+                \}\
+            \}\
+        \}\
+    \}\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+\
+
+\f0 \'b5\'da\'b6\'fe\'cc\'e2\'a3\'ba\
+\
+
+\f1 \cf2 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 void\cf0  deleteANumber(\cf4 int\cf0  *arr, \cf4 int\cf0   index, \cf4 int\cf0  len)\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf6 for\cf0 (i = index; i < len - \cf5 1\cf0 ; i ++) \
+    \{   \
+        arr[i] = arr[i + \cf5 1\cf0 ]; \
+    \}   \
+    arr[len - \cf5 1\cf0 ] = \cf5 0\cf0 ;\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  arr[] = \{\cf5 1\cf0 ,\cf5 2\cf0 ,\cf5 3\cf0 ,\cf5 4\cf0 ,\cf5 5\cf0 ,\cf5 6\cf0 ,\cf5 7\cf0 \};\
+    \cf4 int\cf0  len = \cf2 sizeof\cf0 (arr)/\cf2 sizeof\cf0 (arr[\cf5 0\cf0 ]);\
+    \cf4 int\cf0  index = \cf5 0\cf0 ;\
+\
+    printf(\cf3 "
+\f0 \'c9\'be\'b3\'fd\'c7\'b0
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++) \
+    \{   \
+        printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+    \}\
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\
+    printf(\cf3 "
+\f0 \'c7\'eb\'ca\'d5\'c8\'eb\'d2\'aa\'c9\'be\'b3\'fd\'b5\'c4\'ce\'bb\'d6\'c3
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    scanf(\cf3 "\cf5 %d\cf3 "\cf0 ,&index);\
+\
+    deleteANumber(arr, index, len);\
+\
+    printf(\cf3 "
+\f0 \'c9\'be\'b3\'fd\'ba\'f3
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+    \}\
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}
+\f0 \
+\
+\'b5\'da\'c8\'fd\'cc\'e2:\
+\
+
+\f1 \cf2 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 void\cf0  selectSort(\cf4 int\cf0  *arr,\cf4 int\cf0  len)\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  j = \cf5 0\cf0 ;\
+    \cf4 int\cf0  min = \cf5 0\cf0 ;\
+    \cf4 int\cf0  temp = \cf5 0\cf0 ;\
+\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len - \cf5 1\cf0 ; i ++) \
+    \{   \
+        min = i;\
+        \cf6 for\cf0 (j = i + \cf5 1\cf0 ; j < len; j ++) \
+        \{   \
+            \cf6 if\cf0 (arr[min] > arr[j])\
+                min = j;\
+        \}   \
+\
+        \cf6 if\cf0 (min != i)\
+        \{   \
+            temp = arr[i];\
+            arr[i] = arr[min];\
+            arr[min] = temp;\
+        \}\
+    \}\
+\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  arr[] = \{\cf5 7\cf0 ,\cf5 6\cf0 ,\cf5 5\cf0 ,\cf5 4\cf0 ,\cf5 3\cf0 ,\cf5 2\cf0 ,\cf5 1\cf0 \};\
+    \cf4 int\cf0  len = \cf2 sizeof\cf0 (arr)/\cf2 sizeof\cf0 (arr[\cf5 0\cf0 ]);\
+\
+    printf(\cf3 "
+\f0 \'c5\'c5\'d0\'f2\'c7\'b0
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+    \}\
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\
+    selectSort(arr,len);\
+\
+    printf(\cf3 "
+\f0 \'c5\'c5\'d0\'f2\'ba\'f3
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+    \}\
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'cb\'c4\'cc\'e2\'a3\'ba
+\f1 \
+\
+\cf2 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 void\cf0  insertANumber(\cf4 int\cf0  *arr,\cf4 int\cf0  num,\cf4 int\cf0  len)\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  flag = \cf5 0\cf0 ;\
+    \cf4 int\cf0  index = len - \cf5 1\cf0 ;\
+\
+    \cf6 if\cf0 (arr[\cf5 0\cf0 ] < arr[\cf5 1\cf0 ])\
+        flag = \cf5 1\cf0 ;\
+    \cf6 else\cf0  \cf6 if\cf0 (arr[\cf5 0\cf0 ] > arr[\cf5 1\cf0 ])\
+        flag = \cf5 0\cf0 ;\
+\
+    \cf6 if\cf0 (flag == \cf5 1\cf0 )\
+    \{   \
+        \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++) \
+        \{   \
+            \cf6 if\cf0 (arr[i] >= num)\
+            \{   \
+                index = i;\
+                \cf6 break\cf0 ;\
+            \}   \
+        \}   \
+    \}\
+\
+    \cf6 if\cf0 (flag == \cf5 0\cf0 )\
+    \{\
+        \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+        \{\
+            \cf6 if\cf0 (arr[i] <= num)\
+            \{\
+                index = i;\
+                \cf6 break\cf0 ;\
+            \}\
+        \}\
+    \}\
+\
+    \cf6 for\cf0 (i = len - \cf5 1\cf0 ; i > index; i --)\
+    \{\
+        arr[i] = arr[i - \cf5 1\cf0 ];\
+    \}\
+    arr[index] = num;\
+\
+\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  arr[] = \{\cf5 7\cf0 ,\cf5 6\cf0 ,\cf5 5\cf0 ,\cf5 4\cf0 ,\cf5 3\cf0 ,\cf5 2\cf0 ,\cf5 1\cf0 \};\
+    \cf4 int\cf0  len = \cf2 sizeof\cf0 (arr)/\cf2 sizeof\cf0 (arr[\cf5 0\cf0 ]);\
+    \cf4 int\cf0  num = \cf5 0\cf0 ;\
+    printf(\cf3 "
+\f0 \'b2\'e5\'c8\'eb\'c7\'b0
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+    \}\
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\
+    printf(\cf3 "
+\f0 \'c7\'eb\'ca\'e4\'c8\'eb\'d2\'aa\'b2\'e5\'c8\'eb\'b5\'c4\'ca\'fd
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    scanf(\cf3 "\cf5 %d\cf3 "\cf0 ,&num);\
+\
+    insertANumber(arr,num,len);\
+\
+    printf(\cf3 "
+\f0 \'b2\'e5\'c8\'eb\'ba\'f3
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+    \}\
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'ce\'e5\'cc\'e2\'a3\'ba
+\f1 \
+\
+\cf2 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 char\cf0  *mystrcpy(\cf4 char\cf0  *dest, \cf4 const\cf0  \cf4 char\cf0 * src)\
+\{\
+    \cf4 char\cf0  *p = dest;\
+    \cf6 while\cf0 (*src != \cf5 '\\0'\cf0 )\
+    \{   \
+        *dest ++ = *src ++; \
+    \}   \
+    *dest = \cf5 '\\0'\cf0 ;\
+    \cf6 return\cf0  p;\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 char\cf0  str1[\cf5 50\cf0 ] = \{\cf5 '\\0'\cf0 \};\
+    \cf4 char\cf0  str2[] = \cf3 "hello world"\cf0 ;\
+\
+    mystrcpy(str1,str2);\
+\
+    printf(\cf3 "str2 = \cf5 %s\\n\cf3 "\cf0 ,str2);\
+    printf(\cf3 "str1 = \cf5 %s\\n\cf3 "\cf0 ,str1);\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'c1\'f9\'cc\'e2\'a3\'ba
+\f1 \
+\cf2 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 void\cf0  up_and_down(\cf4 int\cf0  *arr, \cf4 int\cf0  len)\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    printf(\cf3 "\cf5 %d\cf3  \cf5 %d\cf3  "\cf0 ,arr[\cf5 0\cf0 ],arr[\cf5 1\cf0 ]);\
+    \cf4 int\cf0  count = \cf5 1\cf0 ;\
+\
+    \cf6 for\cf0 (i = \cf5 2\cf0 ; i < len; i ++) \
+    \{   \
+        \cf6 if\cf0 (arr[i - \cf5 2\cf0 ] > arr[i - \cf5 1\cf0 ] && arr[i - \cf5 1\cf0 ] > arr[i])\
+            printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+        \cf6 else\cf0  \cf6 if\cf0 (arr[i - \cf5 2\cf0 ] < arr[i - \cf5 1\cf0 ] && arr[i - \cf5 1\cf0 ] < arr[i])\
+            printf(\cf3 "\cf5 %d\cf3  "\cf0 ,arr[i]);\
+        \cf6 else\cf0 \
+        \{   \
+            printf(\cf3 "\cf5 \\n%d\cf3  \cf5 %d\cf3  "\cf0 ,arr[i - \cf5 1\cf0 ], arr[i]);\
+            count ++; \
+        \}   \
+    \}   \
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+    printf(\cf3 "
+\f0 \'b5\'dd\'d4\'f6\'b5\'dd\'bc\'f5\'b8\'f6\'ca\'fd\'ce\'aa
+\f1 :\cf5 %d\\n\cf3 "\cf0 ,count);\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 int\cf0  arr[] = \{\cf5 1\cf0 ,\cf5 10\cf0 ,\cf5 8\cf0 ,\cf5 5\cf0 ,\cf5 9\cf0 ,\cf5 3\cf0 ,\cf5 2\cf0 ,\cf5 6\cf0 ,\cf5 7\cf0 ,\cf5 4\cf0 \};\
+    \cf4 int\cf0  len = \cf2 sizeof\cf0 (arr)/\cf2 sizeof\cf0 (arr[\cf5 0\cf0 ]);\
+\
+    up_and_down(arr,len);\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'c6\'df\'cc\'e2:\
+
+\f1 \cf2 #include \cf3 <stdio.h>\cf0 \
+\
+\cf4 void\cf0  onlyone(\cf4 int\cf0  m, \cf4 int\cf0  n)\
+\{\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  count = \cf5 0\cf0 ;\
+    \cf4 int\cf0  arr[m];\
+    \cf4 int\cf0  len = m;\
+    \cf4 int\cf0  man = m;\
+\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++) \
+    \{   \
+        arr[i] = i + \cf5 1\cf0 ;\
+    \}   \
+\
+    i = \cf5 0\cf0 ;\
+    \cf6 while\cf0 (man > \cf5 1\cf0 )\
+    \{   \
+        \cf6 if\cf0 (arr[i] != \cf5 0\cf0 )\
+        \{   \
+            count ++; \
+        \}   \
+\
+        \cf6 if\cf0 (count == n)\
+        \{\
+            arr[i] = \cf5 0\cf0 ;\
+            count = \cf5 0\cf0 ;\
+            man --;\
+        \}\
+\
+        \cf6 if\cf0 (i == len - \cf5 1\cf0 )\
+            i = -\cf5 1\cf0 ;\
+\
+        i ++;\
+    \}\
+\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        \cf6 if\cf0 (arr[i] != \cf5 0\cf0 )\
+            printf(\cf3 "
+\f0 \'d7\'ee\'ba\'f3\'c1\'f4\'cf\'c2\'b5\'c4\'c8\'cb\'ca\'c7\'b5\'da
+\f1 \cf5 %d
+\f0 \cf3 \'ba\'c5
+\f1 \cf5 \\n\cf3 "\cf0 ,i);\
+    \}\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 int\cf0  n = \cf5 0\cf0 ;\
+    \cf4 int\cf0  m = \cf5 0\cf0 ;\
+\
+    printf(\cf3 "
+\f0 \'c7\'eb\'ca\'e4\'c8\'eb\'d3\'d0\'bc\'b8\'b8\'f6\'c8\'cb
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    scanf(\cf3 "\cf5 %d\cf3 "\cf0 ,&m);\
+    getchar();\
+    printf(\cf3 "
+\f0 \'c7\'eb\'ca\'e4\'c8\'eb\'b1\'a8\'ca\'fd\'b5\'bd\'bc\'b8
+\f1 ?\cf5 \\n\cf3 "\cf0 );\
+    scanf(\cf3 "\cf5 %d\cf3 "\cf0 ,&n);\
+\
+    onlyone(m,n);\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'b0\'cb\'cc\'e2
+\f1 \
+\cf2 #include \cf3 <stdio.h>\cf0 \
+\cf2 #include \cf3 <string.h>\cf0 \
+\cf2 #include \cf3 <ctype.h>\cf0 \
+\
+\cf4 int\cf0  is1000PhoneMailString(\cf4 const\cf0  \cf4 char\cf0  * str)\
+\{\
+    \cf4 char\cf0  *p = \cf3 "@1000phone.com"\cf0 ;\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+\
+    \cf6 while\cf0 (str[i] != \cf5 '@'\cf0  && str[i] != \cf5 '\\0'\cf0 )\
+    \{   \
+        \cf6 if\cf0 (!(isalnum(str[i]) || str[i] == \cf5 '_'\cf0 ))\
+            \cf6 return\cf0  \cf5 0\cf0 ;\
+        i ++; \
+    \}   \
+\
+    \cf6 if\cf0 (strcmp(p,str + i)) \
+        \cf6 return\cf0  \cf5 0\cf0 ;\
+    \cf6 else\cf0 \
+        \cf6 return\cf0  \cf5 1\cf0 ;\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 char\cf0  mail[\cf5 50\cf0 ] = \{\cf5 '\\0'\cf0 \};\
+    printf(\cf3 "
+\f0 \'c7\'eb\'ca\'e4\'c8\'eb\'d2\'bb\'b8\'f6\'d3\'ca\'cf\'e4\'d5\'cb\'ba\'c5
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    scanf(\cf3 "\cf5 %[^\\n]\cf3 "\cf0 ,mail);\
+\
+    \cf4 int\cf0  ret = \cf5 0\cf0 ;\
+    ret = is1000PhoneMailString(mail);\
+\
+    \cf6 if\cf0 (ret == \cf5 1\cf0 )\
+    \{\
+        printf(\cf3 "
+\f0 \'c4\'e3\'ca\'e4\'c8\'eb\'b5\'c4\'d5\'cb\'ba\'c5\'ca\'c7\'c7\'a7\'b7\'e6\'d3\'ca\'cf\'e4
+\f1 ;\cf5 \\n\cf3 "\cf0 );\
+    \}\
+    \cf6 else\cf0  \cf6 if\cf0 (ret == \cf5 0\cf0 )\
+    \{\
+        printf(\cf3 "
+\f0 \'c4\'fa\'ca\'e4\'c8\'eb\'b5\'c4\'d5\'cb\'ba\'c5\'b2\'bb\'ca\'c7\'c7\'a7\'b7\'e6\'d3\'ca\'cf\'e4
+\f1 ;\cf5 \\n\cf3 "\cf0 );\
+    \}\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'be\'c5\'cc\'e2\'a3\'ba
+\f1 \
+\
+\cf2 #include \cf3 <stdio.h>\cf0 \
+\cf2 #include \cf3 <string.h>\cf0 \
+\
+\cf4 void\cf0  reserve(\cf4 char\cf0  *str)\
+\{\
+    \cf4 char\cf0  *delim = \cf3 "@
+\f0 \'a3\'a4
+\f1 $&"\cf0 ;\
+    \cf4 char\cf0  *p[\cf5 10\cf0 ] = \{\cf5 NULL\cf0 \};\
+    \cf4 int\cf0  count = \cf5 0\cf0 ;\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+\
+    p[\cf5 0\cf0 ] = strtok(str,delim);\
+    \cf6 while\cf0 (p[i] != \cf5 NULL\cf0 )\
+    \{   \
+        i ++; \
+        count ++; \
+        p[i] = strtok(\cf5 NULL\cf0 ,delim);\
+    \}   \
+\
+    \cf6 for\cf0 (i = count - \cf5 1\cf0 ; i >= \cf5 0\cf0 ; i --) \
+    \{   \
+        printf(\cf3 "\cf5 %s\cf3  "\cf0 ,p[i]);\
+    \}   \
+    printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 char\cf0  str[] = \cf3 "hello@baby
+\f0 \'a3\'a4
+\f1 welcome$to&qianfeng"\cf0 ;\
+\
+    reserve(str);\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+\
+
+\f0 \'b5\'da\'ca\'ae\'cc\'e2\'a3\'ba
+\f1 \
+\
+\cf2 #include \cf3 <stdio.h>\cf0 \
+\cf2 #include \cf3 <string.h>\cf0 \
+\
+\cf4 void\cf0  printString(\cf4 const\cf0  \cf4 char\cf0  *str)\
+\{\
+    \cf4 int\cf0  len = strlen(str);\
+    \cf4 char\cf0  arr[len][len];\
+    \cf4 int\cf0  i = \cf5 0\cf0 ;\
+    \cf4 int\cf0  j = \cf5 0\cf0 ;\
+   \
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len * len; i ++)\
+    \{\
+        arr[\cf5 0\cf0 ][i] = \cf5 ' '\cf0 ;\
+    \}\
+\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+       \cf6 for\cf0 (j = \cf5 0\cf0 ; j < len; j ++)\
+        \{\
+            \cf6 if\cf0 (i == \cf5 0\cf0  || i == len - \cf5 1\cf0  || i == j)\
+                arr[i][j] = *(str + j);\
+            \cf6 if\cf0 (i + j == len - \cf5 1\cf0 )\
+                arr[i][j] = *(str + len - i - 1);\
+        \}\
+    \}\
+\
+    \cf6 for\cf0 (i = \cf5 0\cf0 ; i < len; i ++)\
+    \{\
+        \cf6 for\cf0 (j = \cf5 0\cf0 ; j < len; j ++)\
+        \{\
+            printf(\cf3 \'93\cf5 %c\cf3 \'94\cf0 ,arr[i][j]); \
+        \}\
+        printf(\cf3 "\cf5 \\n\cf3 "\cf0 );\
+    \}\
+\}\
+\
+\cf4 int\cf0  main(\cf4 void\cf0 )\
+\{\
+    \cf4 char\cf0  str[\cf5 20\cf0 ] = \{\cf5 '\\0'\cf0 \};\
+    printf(\cf3 "
+\f0 \'c7\'eb\'ca\'e4\'c8\'eb\'d2\'bb\'b6\'ce\'d7\'d6\'b7\'fb\'b4\'ae
+\f1 :\cf5 \\n\cf3 "\cf0 );\
+    scanf(\cf3 "\cf5 %[^\\n]\cf3 "\cf0 ,str);\
+\
+    printString(str);\
+\
+    \cf6 return\cf0  \cf5 0\cf0 ;\
+\}\
+}

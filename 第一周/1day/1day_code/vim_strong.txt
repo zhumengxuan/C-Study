@@ -1,0 +1,31 @@
+
+//注意:下面的内容是用来增强vim的功能的。
+//使用方法是在vim的家目录下创建一个.vimrc的文件，然后把下面
+//的内容拷贝进去，保存退出即可。
+//注意不要拷贝行号过去
+//临时去掉行号的方法:set nonu+回车
+//步骤：
+//1、使用cd命令进入“工作目录”；
+//2、使用ls -a查看该目录下是否有.vimrc文件
+//3、使用vi .vimrc进入该文件
+//4、把下面的内容(16-29行)拷贝到这个.vimrc文件中，保存退出即可。
+//5、去其他地方编程看是否有颜色即可。有颜色即配置成功!
+//6、注意1:拷贝的时候不能漏掉任何一个字符，特别是首字符s
+//7、注意2:拷贝的时候不能拷贝任何文字（汉字）
+//8、注意3:拷贝的时候要先把行号去掉。
+set nu
+set nocp
+set ru
+set hls
+set is
+syntax on
+set backspace=indent,eol,start
+set sw=4
+set ts=4
+set sm
+set cin
+colo slate
+set guifont=Courier\ New\ 10
+map <F3> !g++ % -o mainutocmd FileType python setlocal et sta sw=4 sts=4
+
+

@@ -1,0 +1,823 @@
+{\rtf1\ansi\ansicpg936\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\froman\fcharset0 TimesNewRomanPSMT;
+}
+{\colortbl;\red255\green255\blue255;\red134\green205\blue77;\red41\green66\blue119;\red195\green116\blue28;
+\red163\green217\blue121;\red47\green180\blue29;\red193\green101\blue28;\red46\green174\blue187;\red94\green220\blue255;
+\red217\green11\blue0;\red198\green50\blue253;\red223\green7\blue0;\red159\green160\blue28;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14440\viewh11360\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl288\slmult1\pardirnatural
+
+\f0\fs36 \cf0 \cb2 1
+\f1 \'a1\'a2\'d7\'d4\'b6\'a8\'d2\'e5
+\f0 atoi
+\f1 \'ba\'af\'ca\'fd(\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'bb\'ba\'af\'ca\'fd)
+\f0 \cb1 \
+	while
+\f1 \'a3\'a8
+\f0 1
+\f1 \'a3\'a9\'d1\'ad\'bb\'b7\'c5\'d0\'b6\'cf\'ca\'d7\'d7\'d6\'c4\'b8\'ca\'c7\'b7\'f1\'ca\'c7\'bf\'d5\'b8\'f1\'a1\'a2
+\f0 +
+\f1 \'a1\'a2
+\f0 - 
+\f1 \'ba\'c5
+\f0 \
+	
+\f1 \'cc\'f8\'b3\'f6\'d1\'ad\'bb\'b7\'a3\'ac\'bd\'f8\'c8\'eb\'d7\'d6\'b7\'fb\'d7\'aa\'bb\'bb\'bd\'d7\'b6\'ce\'a1\'a3
+\f0 \
+	
+\f1 \'ca\'b9\'d3\'c3
+\f0 while
+\f1 \'a3\'a8
+\f0 !=\'91\\0\'92
+\f1 \'a3\'a9\'d1\'ad\'bb\'b7\'c5\'d0\'b6\'cf\'ca\'c7\'b7\'f1\'ca\'c7\'ca\'fd\'d7\'d6\'d7\'d6\'b7\'fb\'a3\'ac\'ca\'c7\'b5\'c4\'bb\'b0
+\f0 \
+	num = num * 10 + s[i] -\'910\'92;\
+	
+\f1 \'b2\'bb\'ca\'c7\'ca\'fd\'d7\'d6\'d7\'d6\'b7\'fb
+\f0  break;\
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 \CocoaLigature0 int\cf0  myatoi(\cf3 char\cf0  *s)\
+\{\
+	\cf3 int\cf0  i = \cf3 0\cf0 ;\
+	\cf3 int\cf0  k = \cf3 0\cf0 ;\
+	\cf3 int\cf0  flag = \cf3 0\cf0 ; \cf4 //0
+\f1 \'b1\'ed\'ca\'be\'b7\'c7\'b8\'ba\'ca\'fd\'a3\'ac
+\f0 1
+\f1 \'b1\'ed\'ca\'be\'b8\'ba\'ca\'fd
+\f0 \cf0 \
+\
+	\cf3 while\cf0 (\cf3 1\cf0 )\
+	\{\
+		\cf3 if\cf0 (s[i] == \cf3 ' '\cf0 )\cf4 //
+\f1 \'c8\'e7\'b9\'fb\'c7\'b0\'c3\'e6\'d3\'d0\'bf\'d5\'b8\'f1
+\f0 \cf0 \
+		\{\
+			i ++;\
+			\cf3 continue\cf0 ;\cf4 //
+\f1 \'cc\'f8\'b9\'fd
+\f0 \cf0 \
+		\}\
+\
+		\cf3 if\cf0 (s[i] == \cf3 '-'\cf0  || s[i] == \cf3 '+'\cf0 ) \cf4 //
+\f1 \'c8\'e7\'b9\'fb\'d3\'d0\'b8\'ba\'ba\'c5\'bb\'f2\'d5\'fd\'ba\'c5
+\f0 \cf0 \
+		\{\
+			\cf3 if\cf0 (s[i] == \cf3 '-'\cf0 )\cf4 //
+\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'b8\'ba\'ba\'c5
+\f0 \cf0 \
+				flag = \cf3 1\cf0 ;\cf4 //
+\f1 \'b1\'ed\'ca\'be\'b8\'ba\'ba\'c5
+\f0 \cf0 \
+			i ++;\cf4 //
+\f1 \'d4\'f2\'b4\'d3\'cf\'c2\'d2\'bb\'b8\'f6\'bf\'aa\'ca\'bc\'d7\'aa\'bb\'bb
+\f0 \cf0 \
+			\cf3 break\cf0 ;\cf4 //
+\f1 \'cc\'f8\'b3\'f6\'a3\'ac\'d2\'d4\'cd\'a3\'b6\'d9
+\f0 i
+\f1 \'b5\'c4\'d6\'b5
+\f0 \cf0 \
+		\}\
+		\cf3 else\cf0 \
+			\cf3 break\cf0 ;\cf4 //
+\f1 \'b2\'bb\'ca\'c7\'bf\'d5\'b8\'f1\'a3\'ac\'b2\'bb\'ca\'c7\'d5\'fd\'b8\'ba\'ba\'c5\'d4\'f2\'cc\'f8\'b3\'f6\'a3\'ac\'bd\'f8\'c8\'eb\'b5\'bd\'d7\'aa\'bb\'bb\'b9\'fd\'b3\'cc
+\f0 \cf0 \
+	\}\
+\
+	\cf3 while\cf0 (s[i] != \cf3 '\\0'\cf0 )\cf4 //
+\f1 \'ce\'b4\'bd\'e1\'ca\'f8
+\f0 \cf0 \
+	\{\
+\
+		\cf3 if\cf0 (!isdigit(s[i])) \cf4 //
+\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'b7\'c7\'ca\'fd\'d7\'d6
+\f0 \cf0 \
+			\cf3 break\cf0 ;\cf4 //
+\f1 \'d6\'b1\'bd\'d3\'bd\'e1\'ca\'f8
+\f0 \cf0 \
+		\
+		\cf3 if\cf0 (s[i] >= \cf3 '0'\cf0  && s[i] <= \cf3 '9'\cf0 )\cf4 //
+\f1 \'c8\'e7\'b9\'fb\'ca\'c7\'ca\'fd\'d7\'d6
+\f0 \cf0 \
+		\{\
+			k = k * \cf3 10\cf0  + s[i] - \cf3 '0'\cf0 ;\cf4 //
+\f1 \'d7\'aa\'bb\'af
+\f0 \cf0 \
+		\}\
+\
+		i++; \cf4 //
+\f1 \'d4\'f6\'c1\'bf
+\f0 \cf0 \
+	\}\
+	\
+	\cf3 if\cf0 (flag == \cf3 1\cf0 ) \cf4 //
+\f1 \'c8\'e7\'b9\'fb\'c7\'b0\'c3\'e6\'ca\'c7\'b3\'f6\'cf\'d6\'b9\'fd\'b8\'ba\'ba\'c5\'b5\'c4
+\f0 \cf0 \
+		\cf3 return\cf0  -k;\cf4 //
+\f1 \'b7\'b5\'bb\'d8\'b8\'ba\'ca\'fd
+\f0 \cf0 \
+	\cf3 else\cf0 \
+		\cf3 return\cf0  k; \cf4 //
+\f1 \'b7\'f1\'d4\'f2\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'d5\'fd\'ca\'fd
+\f0 \cf0 \
+\}\
+\
+\CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl288\slmult1\pardirnatural
+\cf0 \cb2 2
+\f1 \'a1\'a2\'d7\'d4\'b6\'a8\'d2\'e5
+\f0 strcat
+\f1 \'ba\'af\'ca\'fd(\'d7\'d6\'b7\'fb\'b4\'ae\'c1\'ac\'bd\'d3\'ba\'af\'ca\'fd)\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf3 \cb1 \CocoaLigature0 void\cf0  mystrcat_p(\cf3 char\cf0  *s1, \cf3 const\cf0  \cf3 char\cf0  *s2)\
+\{\
+	\cf3 while\cf0 (*s1 != \cf3 '\\0'\cf0 )\
+	\{\
+		s1 ++;\
+	\}\
+	\cf3 while\cf0 (*s2 != \cf3 '\\0'\cf0 )\
+	\{\
+		*s1 ++ = *s2 ++;\
+	\}\
+	*s1 = \cf3 '\\0'\cf0 ;\
+\}\CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl288\slmult1\pardirnatural
+\cf0 \
+\cb2 3
+\f1 \'a1\'a2\'d7\'d4\'b6\'a8\'d2\'e5
+\f0 strcmp
+\f1 \'ba\'af\'ca\'fd(\'d7\'d6\'b7\'fb\'b4\'ae\'b1\'c8\'bd\'cf\'ba\'af\'ca\'fd)
+\f0 \cb1 \
+\pard\tx866\pardeftab866\sl288\slmult1\pardirnatural
+\cf3 \CocoaLigature0 int\cf0  mystrcmp(\cf3 const\cf0  \cf3 char\cf0  *s1, \cf3 const\cf0  \cf3 char\cf0  *s2)\
+\{\
+	\cf3 int\cf0  i = \cf3 0\cf0 ;\
+	\cf3 while\cf0  (s1[i] != \cf3 '\\0'\cf0  && s2[i] != \cf3 '\\0'\cf0 )\
+	\{\
+		\cf3 if\cf0 (s1[i] != s2[i])\
+		\{\
+			\cf3 return\cf0  s1[i] - s2[i];\cf4 //
+\f1 \'c1\'bd\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'bc\'c3\'bb\'bd\'e1\'ca\'f8\'b5\'ab\'b2\'bb\'d2\'bb\'d1\'f9\'b5\'c4\'c7\'e9\'bf\'f6
+\f0 \cf0 \
+		\}\
+		i ++;\
+	\}\
+	\cf3 return\cf0  s1[i] - s2[i];\cf4 //
+\f1 \'d3\'d0\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb\'b4\'ae\'cc\'e1\'c7\'b0\'bd\'e1\'ca\'f8\'c1\'cb\'b5\'c4\'c7\'e9\'bf\'f6
+\f0 \cf0 \
+\}\
+\CocoaLigature1 \
+\cb2 4
+\f1 \'a1\'a2\'d7\'d4\'b6\'a8\'d2\'e5
+\f0 strstr
+\f1 \'ba\'af\'ca\'fd(\'d7\'d6\'b7\'fb\'b4\'ae\'b2\'e9\'d5\'d2\'ba\'af\'ca\'fd)
+\f0 \cb1 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 \CocoaLigature0 const\cf0  \cf3 char\cf0  *mystrstr(\cf3 const\cf0  \cf3 char\cf0  *str,\cf3 const\cf0  \cf3 char\cf0  *substr)\
+\{\
+	\cf3 const\cf0  \cf3 char\cf0  *s1;\
+	\cf3 const\cf0  \cf3 char\cf0  *s2;\
+	\cf3 int\cf0  flag = \cf3 0\cf0 ;\cf4 //
+\f1 \'d5\'d2\'b5\'bd\'d2\'bb\'b8\'f6\'d7\'d3\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'c4\'b1\'ea\'bc\'c7
+\f0 \cf0 \
+		\
+	assert(str);\
+	assert(substr);\
+\
+	\cf3 while\cf0 (*str != \cf3 '\\0'\cf0 )\cf4 //
+\f1 \'c4\'b8\'d7\'d6\'b7\'fb\'b4\'ae\'c3\'bb\'bd\'e1\'ca\'f8
+\f0 \cf0 \
+	\{\
+		s1 = str;\cf4 //
+\f1 \'b1\'b8\'b7\'dd
+\f0 str\cf0 \
+		s2 = substr;\cf4 //
+\f1 \'b1\'b8\'b7\'dd
+\f0 substr\cf0 \
+		\cf3 while\cf0 ((*s2 == *s1) != \cf3 '\\0'\cf0 )\cf4 //
+\f1 \'cf\'e0\'b5\'c8\'c7\'d2\'b2\'bb\'bd\'e1\'ca\'f8
+\f0 \cf0 \
+		\{\
+			s2 ++;\cf4 //
+\f1 \'d7\'d4\'d4\'f6
+\f0 \cf0 \
+			s1 ++;\cf4 //
+\f1 \'d7\'d4\'d4\'f6
+\f0 \cf0 \
+		\}\
+		\cf3 if\cf0 (*s2 == \cf3 '\\0'\cf0 )\cf4 //
+\f1 \'d7\'d3\'d7\'d6\'b7\'fb\'b4\'ae\'bd\'e1\'ca\'f8\'c1\'cb
+\f0 \cf0 \
+		\{\
+			flag = \cf3 1\cf0 ;\cf4 //
+\f1 \'d5\'d2\'b5\'bd\'b5\'c4\'b1\'ea\'bc\'c7
+\f0 \cf0 \
+			\cf3 break\cf0 ;\cf4 //
+\f1 \'cd\'cb\'b3\'f6
+\f0 \cf0 \
+		\}\
+		str++;\cf4 //
+\f1 \'ba\'f3\'c5\'b2\'d2\'bb\'b8\'f6\'ce\'bb\'bc\'cc\'d0\'f8\'d5\'d2
+\f0 \cf0 \
+	\}\
+\
+	\cf3 if\cf0 (flag == \cf3 1\cf0 )\
+		\cf3 return\cf0  str;\
+	\cf3 else\cf0 \
+		\cf3 return\cf0  \cf3 NULL\cf0 ;\
+\}\CocoaLigature1 \
+\pard\tx866\pardeftab866\sl288\slmult1\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl288\slmult1\pardirnatural
+\cf0 	\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl288\slmult1\pardirnatural
+\cf0 \cb5 5
+\f1 \'a1\'a2\'d7\'d6\'b7\'fb\'b4\'ae\'b5\'a5\'b4\'ca\'c4\'e6\'d0\'f2\'ca\'e4\'b3\'f6
+\f0 \cb1 \
+	\cf6 \CocoaLigature0 void\cf0  reserve(\cf6 char\cf0  * s)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl288\slmult1\pardirnatural
+\cf0 \{\
+    \cf6 char\cf0  *p[\cf7 20\cf0 ] = \{\cf7 NULL\cf0 \};\
+    \cf6 char\cf0  *delim = \cf8 " "\cf0 ;\
+    \cf6 int\cf0  i = \cf7 0\cf0 ;\
+    \cf6 int\cf0  count = \cf7 0\cf0 ;\
+\
+    p[\cf7 0\cf0 ] = strtok(s,delim);\
+    \cf9 while\cf0 (p[i] != \cf7 NULL\cf0 )\
+    \{   \
+        i ++; \
+        count ++; \
+        p[i] = strtok(\cf7 NULL\cf0 ,delim);\
+    \}   \
+\
+    \cf9 for\cf0 (i = count - \cf7 1\cf0 ; i >= \cf7 0\cf0 ; i--)\
+    \{   \
+        printf(\cf8 "\cf7 %s\cf8  "\cf0 ,p[i]);\
+    \}   \
+    printf(\cf8 "\cf7 \\n\cf8 "\cf0 );\
+\}\
+\
+\cb2 6
+\f1 \'a1\'a2\CocoaLigature1 \'d3\'d0
+\f0 n
+\f1 \'b8\'f6\'d5\'fb\'ca\'fd\'a3\'ac\'ca\'b9\'c6\'e4\'c7\'b0\'c3\'e6\'b8\'f7\'ca\'fd\'cb\'b3\'d0\'f2\'cf\'f2\'ba\'f3\'d2\'c6
+\f0 m
+\f1 \'b8\'f6\'ce\'bb\'d6\'c3\'a3\'ac\'d7\'ee\'ba\'f3
+\f0 m
+\f1 \'b8\'f6\'ca\'fd\'b1\'e4\'b3\'c9\'d7\'ee\'c7\'b0\'c3\'e6\'b5\'c4
+\f0 m
+\f1 \'b8\'f6\'ca\'fd\'a3\'a8
+\f0 ****
+\f1 \'a3\'a9
+\f0  (
+\f1 \'ca\'fd\'d7\'e9\'d1\'ad\'bb\'b7\'d2\'c6\'b6\'af
+\f0 )\cb1 \
+\
+
+\f1 \'cb\'bc\'c2\'b7\'a3\'ba\'d2\'bb\'b4\'ce\'d2\'c6\'b6\'af\'d2\'bb\'ce\'bb\'a3\'ac\'d2\'c6\'b6\'af
+\f0 m
+\f1 \'b4\'ce\'a3\'bb
+\f0 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 \CocoaLigature0 	for\cf0 (i = \cf3 0\cf0 ; i < m; i ++)\
+	\{\
+		temp = arr[len - \cf3 1\cf0 ];\
+		\cf3 for\cf0 (j = len - \cf3 1\cf0 ; j > \cf3 0\cf0 ; j--)\
+		\{\
+			arr[j] = arr[j - \cf3 1\cf0 ];\
+		\}\
+		arr[\cf3 0\cf0 ] = temp;\
+	\}\
+\
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl288\slmult1\pardirnatural
+\cf0 \cb2 7
+\f1 \'a1\'a2\'c7\'eb\'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'b9\'a6\'c4\'dc\'ce\'aa\'bd\'ab\'d2\'bb\'b8\'f6\'ca\'fd\'b2\'e5\'c8\'eb\'b5\'bd\'d2\'bb\'b8\'f6\'d3\'d0\'d0\'f2\'b5\'c4\'ca\'fd\'d7\'e9\'d6\'d0\'ca\'fd\'d7\'e9\'d7\'d4\'d0\'d0\'b6\'a8\'d2\'e5\'a1\'a3
+\f0 \
+void insert(int *arr, int n, int len);\cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl288\slmult1\pardirnatural
+
+\f1 \cf10 \'d7\'a2\'d2\'e2\'b0\'d1
+\f0 index = len - 1
+\f1 \'a3\'bb\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf3 \CocoaLigature0 void\cf0  insert(\cf3 int\cf0  *arr, \cf3 int\cf0  n, \cf3 int\cf0  len)\
+\{\
+	\cf3 int\cf0  i = \cf3 0\cf0 ;\
+	\cf3 int\cf0  index = len - \cf3 1\cf0 ;\
+	\cf3 int\cf0  flag = \cf3 2\cf0 ;\cf4 //0
+\f1 \'b1\'ed\'ca\'be\'bd\'b5\'d0\'f2\'a3\'ac
+\f0 1
+\f1 \'b1\'ed\'ca\'be\'c9\'fd\'d0\'f2\'a3\'ac
+\f0 2
+\f1 \'b1\'ed\'ca\'be\'c6\'e4\'cb\'fb
+\f0 \cf0 \
+\
+	\cf3 if\cf0 (arr[\cf3 0\cf0 ] < arr[\cf3 1\cf0 ])\
+		flag = \cf3 1\cf0 ;\
+	\cf3 else\cf0  \cf3 if\cf0 (arr[\cf3 0\cf0 ] > arr[\cf3 1\cf0 ])\
+		flag = \cf3 0\cf0 ;\
+\
+	\cf3 if\cf0 (flag == \cf3 1\cf0 )\
+	\{\
+		\cf3 for\cf0 (i = \cf3 0\cf0 ; i <len; i ++)\
+		\{\
+			\cf3 if\cf0 (arr[i] > n)\
+			\{\
+				index = i;\
+				\cf3 break\cf0 ;\
+			\}\
+		\}\
+\
+	\}\
+\
+	\cf3 else\cf0  \cf3 if\cf0 (flag == \cf3 0\cf0 )\
+	\{\
+		\cf3 for\cf0 (i = \cf3 0\cf0 ; i <len; i ++)\
+		\{\
+			\cf3 if\cf0 (arr[i] < n)\
+			\{\
+				index = i;\
+				\cf3 break\cf0 ;\
+			\}\
+		\}	\
+	\}\
+\
+	\cf3 for\cf0 (i = len - \cf3 1\cf0 ; i > index; i --)\
+	\{\
+		arr[i] = arr[i - \cf3 1\cf0 ];\
+	\}\
+	arr[index] = n;\
+\}\
+\pard\tx866\pardeftab866\pardirnatural
+\cf10 \CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl288\slmult1\pardirnatural
+\cf0 \
+\pard\pardeftab420\ri380\sl288\slmult1\qj
+\cf0 \cb2 8
+\f1 \'a1\'a2
+\f0  
+\f1 \'b1\'e0\'d0\'b4\'ba\'af\'ca\'fd\'bd\'ab\'d2\'bb\'b8\'f6
+\f0 n*n
+\f1 \'be\'d8\'d5\'f3\'d7\'aa\'d6\'c3\'a3\'ac\'c0\'fd\'c8\'e7\'a3\'ba\'a3\'a8
+\f0 ****
+\f1 \'a3\'a9
+\f0 \
+  1 2 3 4     1 5 3 4\
+  5 6 7 8 ->2 6 2 7  \
+  3 2 5 9     3 7 5 2\
+  4 7 2 3     4 8 9 3\
+\cb1 \
+
+\f1 \'d7\'a2\'d2\'e2\'a3\'ba\'d1\'ad\'bb\'b7\'ca\'c7\'bf\'d8\'d6\'c6\'c9\'cf\'b0\'eb\'b2\'bf\'b7\'d6\'ba\'cd\'cf\'c2\'b0\'eb\'b2\'bf\'b7\'d6\'b5\'c4\'b6\'d4\'b5\'f7\'a3\'ac\'cb\'f9\'d2\'d4\'d6\'bb\'d2\'aa
+\f0 \cf11 \CocoaLigature0 j = i + 1; j < n;
+\f1 \cf0 \CocoaLigature1 \'bc\'b4\'bf\'c9
+\f0 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf3 \CocoaLigature0 for\cf0 (i = \cf3 0\cf0 ; i < \cf3 n\cf0 ; i ++)\
+	\{\
+		\cf3 for\cf0 (j = i + \cf3 1\cf0 ; j < \cf3 n\cf0 ; j ++)\
+		\{\
+			temp = arr[i][j];\
+			arr[i][j] = arr[j][i];\
+			arr[j][i] = temp;\
+		\}\
+	\}\
+\pard\pardeftab420\ri380\sl288\slmult1\qj
+\cf0 \CocoaLigature1 \
+\
+\cb2 9
+\f1 \'a1\'a2\'d3\'d0
+\f2 n
+\f1 \'b8\'f6\'c8\'cb\'ce\'a7\'b3\'c9\'d2\'bb\'c8\'a6\'a3\'ac\'cb\'b3\'d0\'f2\'c5\'c5\'ba\'c5\'a1\'a3\'b4\'d3\'b5\'da\'d2\'bb\'b8\'f6\'c8\'cb\'bf\'aa\'ca\'bc\'b1\'a8\'ca\'fd\'a3\'a8\'b4\'d3
+\f2 1
+\f1 \'b5\'bd
+\f2 3
+\f1 \'b1\'a8\'ca\'fd\'a3\'a9\'a3\'ac\'b7\'b2\'b1\'a8\'b5\'bd
+\f2 3
+\f1 \'b5\'c4\'c8\'cb\'cd\'cb\'b3\'f6\'c8\'a6\'d7\'d3\'a3\'ac\'ce\'ca\'d7\'ee\'ba\'f3\'c1\'f4\'cf\'c2\'b5\'c4\'ca\'c7\'d4\'ad\'c0\'b4\'b5\'da\'bc\'b8\'ba\'c5\'b5\'c4\'c4\'c7\'ce\'bb\'a1\'a3\'a3\'a8
+\f2 *****
+\f1 \'a3\'a9 (\'d1\'ad\'bb\'b7+\'d4\'bc\'c9\'aa\'b7\'f2\'ce\'ca\'cc\'e2)
+\f0 \cb1 \
+\
+
+\f1 \'cb\'bc\'c2\'b7\'a3\'ba
+\f0 \
+
+\f1 \'b5\'b1\'c8\'cb\'ca\'fd
+\f0 >1
+\f1 \'ca\'b1\'d1\'ad\'bb\'b7\'a3\'ac\'d1\'ad\'bb\'b7\'b1\'a8\'ca\'fd\'a3\'ac\'b1\'a8\'b5\'bd
+\f0 3
+\f1 \'b5\'c4\'c8\'cb\'c9\'e8\'d6\'c3\'ce\'aa
+\f0 0
+\f1 \'a3\'bb\'b5\'b1
+\f0 i= len-1;i = -1;
+\f1 \'d1\'ad\'bb\'b7\'c5\'d0\'b6\'cf\'a3\'ac\'d7\'ee\'ba\'f3\'b2\'bb\'ca\'c7
+\f0 0
+\f1 \'b5\'c4\'be\'cd\'ca\'c7
+\f0 josefo
+\f1 \'b5\'c4\'ce\'bb\'d6\'c3\
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf0 \CocoaLigature0 	i = \cf3 0\cf0 ;\
+	\cf3 while\cf0 (num > \cf3 1\cf0 ) \cf4 //
+\f1 \'ba\'cb\'d0\'c4\'b2\'bf\'b7\'d6
+\f0 \cf0 \
+	\{\
+		\cf3 if\cf0 (arr[i]!=\cf3 0\cf0 )\
+		\{\
+			count ++;\
+			\cf3 if\cf0 (count == \cf3 3\cf0 )\
+			\{\
+				count = \cf3 0\cf0 ;\
+				arr[i] = \cf3 0\cf0 ;\
+				num--;				\
+			\}\
+		\}\
+\
+		\cf3 if\cf0 (i == len - \cf3 1\cf0 )\
+			i = -\cf3 1\cf0 ;\
+		i++;\
+	\}\
+\
+		\cf3 for\cf0 (i=\cf3 0\cf0 ;i<n;i++)\
+		\{\
+			\cf3 if\cf0 (arr[i]!=\cf3 0\cf0 )\
+				printf(\cf12 "%d"\cf0 , arr[i]);\
+		\}\
+		printf(\cf12 "\\n"\cf0 );\CocoaLigature1 \
+\pard\pardeftab420\ri380\sl288\slmult1\qj
+\cf0 \
+\cb2 10
+\f1 \'a1\'a2\'c7\'eb\'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'b9\'a6\'c4\'dc\'ce\'aa\'cd\'b3\'bc\'c6\'d7\'d6\'b7\'fb\'b4\'ae\'d6\'d0\'b5\'c4\'b5\'a5\'b4\'ca\'b8\'f6\'ca\'fd
+\f0 \
+int countword(char *str);\
+\cb1 \
+int i = 0;\
+while(str[i] != \'91\\0\'92)\
+\{\
+	if(isalpha(str[i]) && !isalpha(str[i + 1]) )\
+		count ++;\
+		i++;\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \cb2 11
+\f1 \'a1\'a2\'c7\'eb\'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'b9\'a6\'c4\'dc\'ba\'cd\'cf\'b5\'cd\'b3\'b5\'c4
+\f0 strrchr(
+\f1 \'b2\'e9\'d5\'d2\'d7\'ee\'ba\'f3\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f0 )
+\f1 \'ba\'af\'ca\'fd\'cf\'e0\'cd\'ac
+\f0 char *mystrrchr(char *str, int c)\
+\pard\pardeftab420\ri380\sl288\slmult1\qj
+\cf0 \cb1 \
+\pard\tx866\pardeftab866\sl288\slmult1\pardirnatural
+\cf3 \CocoaLigature0 char\cf0  *mystrrchr(\cf3 char\cf0  *str,\cf3 int\cf0  c)\
+\{\
+	\cf3 int\cf0  i = \cf3 0\cf0 ;\
+	\cf3 char\cf0  *index = \cf3 NULL\cf0 ;\
+\
+	\cf3 while\cf0 (*(str + i) != \cf3 '\\0'\cf0 )	\
+	\{\
+		\cf3 if\cf0 (c == *(str + i))\
+		\{\
+			index = str + i;\
+		\}\
+		i ++;\
+	\}\
+	\cf3 return\cf0  index;\
+\}\
+\
+\pard\pardeftab420\ri380\sl288\slmult1\qj
+\cf0 \cb2 \CocoaLigature1 12
+\f1 \'a1\'a2\'c7\'eb\'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ba\'b8\'f9\'be\'dd\'d3\'c3\'bb\'a7\'d6\'b8\'b6\'a8\'b5\'c4\'d0\'d0\'ca\'fd\'b4\'f2\'d3\'a1\'b3\'f6\'b6\'d4\'d3\'a6\'d0\'d0\'ca\'fd\'b5\'c4\'d1\'ee\'bb\'d4\'c8\'fd\'bd\'c7\cb1 \
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf3 \CocoaLigature0 void\cf0  print_yanhui(\cf3 int\cf0  n)\
+\{\
+	\cf3 int\cf0  i = \cf3 0\cf0 ;\
+	\cf3 int\cf0  j = \cf3 0\cf0 ;\
+	\cf3 int\cf0  arr[n][n];\
+\
+	\cf3 for\cf0 (i = \cf3 0\cf0 ; i < n; i ++)\
+	\{\
+		\cf3 for\cf0 (j = \cf3 0\cf0 ; j <= i; j ++)\
+		\{\
+			\cf3 if\cf0 (i == j || j == \cf3 0\cf0 )\
+				arr[i][j] = \cf3 1\cf0 ;\
+			\cf3 else\cf0 \
+				arr[i][j] = arr[i - \cf3 1\cf0 ][j - \cf3 1\cf0 ] + arr[i - \cf3 1\cf0 ][j];\
+		\}\
+	\}\
+\
+	\cf3 for\cf0 (i = \cf3 0\cf0 ; i < n; i ++)\
+	\{\
+		\cf3 for\cf0 (j = \cf3 0\cf0 ; j <=i; j ++)\
+		\{\
+			printf(\cf12 "%d\\t"\cf0 ,arr[i][j]);\
+		\}\
+		printf(\cf12 "\\n"\cf0 );\
+	\}\
+\
+\}\
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \cb2 13
+\f1 \'a1\'a2
+\f0 strcpy
+\f1 \'ba\'af\'ca\'fd\'b5\'c4\'ca\'b5\'cf\'d6\'a3\'a8\'d7\'d6\'b7\'fb\'b4\'ae\'bf\'bd\'b1\'b4\'ba\'af\'ca\'fd\'a3\'a9
+\f0 \
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf13   1 \cf6 char\cf0  *mystrcpy(\cf6 const\cf0  \cf6 char\cf0  *dest, \cf6 const\cf0  \cf6 char\cf0  *src)\
+\cf13   2 \cf0 \{\
+\cf13   3 \cf0     \cf6 char\cf0  *s = dest;\
+\cf13   4 \cf0     \cf9 while\cf0 (*src != \cf7 '\\0'\cf0 )\
+\cf13   5 \cf0     \{\
+\cf13   6 \cf0         *dest ++ = *src ++;\
+\cf13   7 \cf0     \}\
+\cf13   8 \cf0     *dest = \cf7 '\\0'\cf0 ;\
+\cf13   9 \cf0  \
+\cf13  10 \cf0     \cf9 return\cf0  s;\
+\cf13  11 \cf0 \}\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs28 \cf0 \cb2 \CocoaLigature1 14
+\f1 \'a1\'a2\'c7\'eb\'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'b9\'a6\'c4\'dc\'ce\'aa\'c7\'f3\'d2\'bb\'b8\'f6\'d3\'c9
+\f0 10
+\f1 \'b8\'f6\'d5\'fb\'ca\'fd\'d7\'e9\'b3\'c9\'b5\'c4\'ca\'fd\'d7\'e9\'d6\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'b5\'dd\'d4\'f6\'ba\'cd\'b5\'dd\'bc\'f5\'d0\'f2\'c1\'d0\'b5\'c4\'b8\'f6\'ca\'fd\'a3\'ac\'b2\'a2\'c7\'d2\'ca\'e4\'b3\'f6\'cb\'f9\'d3\'d0\'b5\'c4\'b5\'dd\'d4\'f6\'ba\'cd\'b5\'dd\'bc\'f5\'d0\'f2\'c1\'d0
+\f0 \
+
+\f1 \'c0\'fd\'c8\'e7\'a3\'ba\'a1\'a1\'a1\'a1
+\f0 \
+
+\f1 \'ca\'e4\'c8\'eb\'a3\'ba
+\f0 1
+\f1 \'a1\'a1
+\f0 10
+\f1 \'a1\'a1
+\f0 8
+\f1 \'a1\'a1
+\f0 5
+\f1 \'a1\'a1
+\f0 9
+\f1 \'a1\'a1
+\f0 3
+\f1 \'a1\'a1
+\f0 2
+\f1 \'a1\'a1
+\f0 6
+\f1 \'a1\'a1
+\f0 7
+\f1 \'a1\'a1
+\f0 4
+\f1 \'a1\'a1
+\f0 \
+
+\f1 \'ca\'e4\'b3\'f6\'a3\'ba
+\f0 6
+\f1 \'a1\'a1\'a1\'a1
+\f0 \
+
+\f1 \'b6\'d4\'d3\'a6\'b5\'c4\'b5\'dd\'d4\'f6\'bb\'f2\'b5\'dd\'bc\'f5\'d7\'d3\'d0\'f2\'c1\'d0\'ce\'aa\'a3\'ba\'a1\'a1\'a1\'a1
+\f0 \
+1
+\f1 \'a1\'a1
+\f0 10
+\f1 \'a1\'a1\'a1\'a1\'a1\'a1
+\f0 \
+10
+\f1 \'a1\'a1
+\f0 8
+\f1 \'a1\'a1
+\f0 5
+\f1 \'a1\'a1\'a1\'a1\'a1\'a1
+\f0 \
+5
+\f1 \'a1\'a1
+\f0 9
+\f1 \'a1\'a1\'a1\'a1
+\f0 \
+9
+\f1 \'a1\'a1
+\f0 3
+\f1 \'a1\'a1
+\f0 2
+\f1 \'a1\'a1\'a1\'a1
+\f0 \
+2
+\f1 \'a1\'a1
+\f0 6
+\f1 \'a1\'a1
+\f0 7\
+7
+\f1 \'a1\'a1
+\f0 4
+\f1 \'a1\'a1
+\f2\b \kerning1\expnd1\expndtw5
+\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0\b0\fs36 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+	printf(\cf12 "%d %d "\cf0 , arr[\cf3 0\cf0 ], arr[\cf3 1\cf0 ]);\
+	\cf4 //
+\f1 \'b2\'bb\'b9\'dc\'ca\'c7\'c9\'fd\'d0\'f2\'bb\'b9\'ca\'c7\'bd\'b5\'d0\'f2\'a3\'ac\'cf\'c8\'b4\'f2\'d3\'a1\'cd\'b7\'c1\'bd\'b8\'f6\'ca\'fd
+\f0 \cf0 \
+\
+	\cf3 for\cf0  (i = \cf3 2\cf0 ; i < \cf3 10\cf0 ; i ++)\
+	\{\
+		\cf3 if\cf0  ((arr[i-\cf3 2\cf0 ] < arr[i-\cf3 1\cf0 ]) && (arr[i-\cf3 1\cf0 ] < arr[i]))\
+			\cf4 //
+\f1 \'ce\'ac\'b3\'d6\'c9\'fd\'d0\'f2\'cc\'f5\'bc\'fe
+\f0 \cf0 \
+		\{\
+			printf(\cf12 "%d "\cf0 , arr[i]);\
+			\cf4 //
+\f1 \'c8\'e7\'b9\'fb\'b1\'a3\'b3\'d6\'c9\'fd\'d0\'f2\'d7\'b4\'cc\'ac\'a3\'ac\'be\'cd\'b4\'f2\'d3\'a1\'b5\'da\'c8\'fd\'b8\'f6\'ca\'fd\'ba\'cd\'d2\'d4\'ba\'f3\'b5\'c4\'c9\'fd\'d0\'f2\'ca\'fd\'d7\'d6
+\f0 \cf0 \
+		\}\
+		\cf3 else\cf0  \cf3 if\cf0 ((arr[i-\cf3 2\cf0 ] > arr[i-\cf3 1\cf0 ]) && (arr[i-\cf3 1\cf0 ] > arr[i]))\cf4 //
+\f1 \'bd\'b5\'d0\'f2\'cc\'f5\'bc\'fe
+\f0 \cf0 \
+		\{\
+			printf(\cf12 "%d "\cf0 , arr[i]);\
+			\cf4 //
+\f1 \'c8\'e7\'b9\'fb\'b1\'a3\'b3\'d6\'bd\'b5\'d0\'f2\'d7\'b4\'cc\'ac\'a3\'ac\'be\'cd\'b4\'f2\'d3\'a1\'b5\'da\'c8\'fd\'b8\'f6\'ca\'fd\'ba\'cd\'d2\'d4\'ba\'f3\'b5\'c4\'bd\'b5\'d0\'f2\'ca\'fd\'d7\'d6
+\f0 \cf0 \
+		\}\
+		\cf3 else\cf0 \
+		\{\
+			printf(\cf12 "\\n%d %d "\cf0 , arr[i-\cf3 1\cf0 ], arr[i]);\
+			\cf4 //
+\f1 \'b4\'f2\'d3\'a1\'b9\'d5\'b5\'e3\'b4\'a6\'b5\'c4\'c1\'bd\'b8\'f6\'ca\'fd
+\f0 \cf0 \
+			count ++;\cf4 //
+\f1 \'b3\'f6\'cf\'d6\'b9\'d5\'b5\'e3\'be\'cd\'bc\'c6\'ca\'fd
+\f0 \cf0 \
+		\}\
+	\}\
+	printf(\cf12 "\\n
+\f1 \'d0\'f2\'c1\'d0\'ca\'fd
+\f0 :%d\\n"\cf0 , count);\
+\
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \cb2 15
+\f1 \'a1\'a2\'c3\'b0\'c5\'dd\'c5\'c5\'d0\'f2\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf3 \cb1 	for\cf0  (i = \cf3 0\cf0 ; i < len - \cf3 1\cf0 ; i ++) \
+	\cf4 //
+\f1 \'cd\'e2\'d1\'ad\'bb\'b7\'b1\'c8\'bd\'cf
+\f0 len
+\f1 \'a3\'ad
+\f0 1
+\f1 \'b4\'ce
+\f0 \cf0 \
+	\cf4 //
+\f1 \'d1\'a1\'d4\'f1\'c5\'c5\'d0\'f2\'d2\'b2\'ca\'c7
+\f0 len-1
+\f1 \'b4\'ce
+\f0 \cf0 \
+	\{				\
+		\cf3 for\cf0  (j = \cf3 0\cf0 ; j < len - \cf3 1\cf0  - i; j ++) \
+		\cf4 //
+\f1 \'c4\'da\'d1\'ad\'bb\'b7\'b1\'c8\'bd\'cf\'a3\'a8
+\f0 len
+\f1 \'a3\'ad
+\f0 1)-i 
+\f1 \'b4\'ce
+\f0 \cf0 \
+		\{\
+			\cf4 //
+\f1 \'c7\'b0\'d2\'bb\'b8\'f6\'ca\'fd\'ba\'cd\'ba\'f3\'d2\'bb\'b8\'f6\'ca\'fd\'b1\'c8\'bd\'cf
+\f0 \cf0 \
+			\cf3 if\cf0  (height[j] > height[j + \cf3 1\cf0 ]) \cf4 //
+\f1 \'cf\'e0\'c1\'da\'b1\'c8\'bd\'cf
+\f0 \cf0 \
+			\{\
+				temp = height[j + \cf3 1\cf0 ];\
+				height[j + \cf3 1\cf0 ] = height[j];\
+				height[j] = temp;\
+			\}\
+		\}\
+	\}\
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \cb2 16
+\f1 \'a1\'a2\'d1\'a1\'d4\'f1\'c5\'c5\'d0\'f2\
+\pard\tx866\pardeftab866\pardirnatural
+
+\f0 \cf3 \cb1 	int\cf0  min = \cf3 0\cf0 ;\
+	\cf3 for\cf0 (i = \cf3 0\cf0 ;i < len - \cf3 1\cf0 ;i ++)\
+	\{\
+		min = i;\cf4 //
+\f1 \'c3\'bf\'b4\'ce\'d1\'a1\'d2\'bb\'b8\'f6\'b1\'ea\'ba\'c5\'d7\'f7\'ce\'aa\'d7\'ee\'d0\'a1\'d6\'b5\'b5\'c4\'b1\'ea\'ba\'c5
+\f0 \cf0 \
+		\cf3 for\cf0 (j = i + \cf3 1\cf0 ;j < len;j ++)\
+		\{\
+			\cf4 //if(height[i] > height[j])\cf0 \
+			\cf4 //
+\f1 \'d7\'a2\'d2\'e2\'d5\'e2\'c0\'ef\'ce\'aa\'ca\'b2\'c3\'b4\'b2\'bb\'c4\'dc\'d0\'b4\'b3\'c9\'d5\'e2\'d1\'f9\'a3\'bf
+\f0 \cf0 \
+			\cf3 if\cf0 (height[min] > height[j])\
+			\{\
+				min = j; \
+				\cf4 //
+\f1 \'d5\'e2\'d6\'d6\'b4\'a6\'c0\'ed\'b7\'bd\'ca\'bd\'d0\'a7\'c2\'ca\'b8\'fc\'b8\'df
+\f0 \cf0 \
+				\cf4 //
+\f1 \'d2\'f2\'ce\'aa\'bd\'bb\'bb\'bb\'b4\'ce\'ca\'fd\'c9\'d9
+\f0 \cf0 \
+			\}\
+		\}\
+\
+		\cf3 if\cf0 (min != i)\
+		\{\
+			temp = height[min];\
+			height[min] = height[i];\
+			height[i] = temp;\
+		\}\
+	\}\
+\
+\
+\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \cb2 17
+\f1 \'a1\'a2\'b4\'ab\'c8\'eb\'d7\'d6\'b7\'fb\'b4\'ae\'a3\'ac\'b4\'f2\'d3\'a1\'b6\'d4\'d3\'a6\'cd\'bc\'d0\'ce\'a1\'a3
+\f0 (15
+\f1 \'b7\'d6
+\f0 )\
+ 
+\f1 \'c8\'e7\'b4\'ab\'c8\'eb\'d7\'d6\'b7\'fb\'b4\'ae
+\f0 "ABCDEFG"\
+ \
+ len\
+ 
+\f1 \'d0\'d0\'ca\'fd\'a3\'ba
+\f0 len + 1\
+ 
+\f1 \'c1\'d0\'ca\'fd\'a3\'ba
+\f0 2*len-1\
+ 
+\f1 \'b4\'f2\'d3\'a1
+\f0 \
+      A           A
+\f1 \'a3\'ba
+\f0 0  6     0  6\
+     BAB          B
+\f1 \'a3\'ba
+\f0 1  5     1  7\
+    CB BC         C: 2  4     2  8\
+   DC   CD\
+  ED     DE       A: 1  6     1   6\
+ FE       EF      B: 2  5     2   7\
+GF         FG     C: 3  4     3   8\
+G           G\
+ 
+\f1 \'cd\'bc\'d0\'ce\'c0\'e0\'cb\'c6\'c1\'bd\'b8\'f6
+\f0 ^
+\f1 \'b5\'fe\'de\'fb
+\f0 \
+ */\
+\pard\tx866\pardeftab866\pardirnatural
+\cf0 \cb1 \
+	\cf3 for\cf0 (i = \cf3 0\cf0 ; i < (len+\cf3 1\cf0 )*(\cf3 2\cf0 *len - \cf3 1\cf0 ); i ++)\
+	\{\
+		arr[\cf3 0\cf0 ][i] = \cf3 ' '\cf0 ;\
+	\}\
+\
+	\cf3 for\cf0 (i = \cf3 0\cf0 ; i < len; i ++)\
+	\{\
+		\cf3 for\cf0 (j = \cf3 0\cf0 ; j < \cf3 2\cf0 *len - \cf3 1\cf0 ; j ++)\
+		\{\
+			\cf3 if\cf0 (i + j == len - \cf3 1\cf0 )\
+				arr[i][j] = *(str + i);\
+			\
+			\cf3 if\cf0 (j - i == len - \cf3 1\cf0 )\
+				arr[i][j] = *(str + i);\
+		\}\
+	\}\
+	\
+	\cf3 for\cf0 (i = \cf3 1\cf0 ; i < len + \cf3 1\cf0 ; i ++)\
+	\{\
+		\cf3 for\cf0 (j = \cf3 0\cf0 ; j < \cf3 2\cf0 *len -\cf3 1\cf0 ; j ++)\
+		\{\
+			\cf3 if\cf0 (i + j == len)\
+				arr[i][j] = *(str + (i-\cf3 1\cf0 ));\
+			\
+			\cf3 if\cf0 (j - i == len - \cf3 2\cf0 )\
+				arr[i][j] = *(str + (i - \cf3 1\cf0 ));\
+	\
+		\}\
+	\}\
+}
